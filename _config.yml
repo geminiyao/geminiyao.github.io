@@ -1,59 +1,58 @@
-# Resources settings
-source:      .
-layouts:     ./_layouts
-timezone:    Asia/Hongkong
+title:            Slate+Simple Jekyll Theme
+description:      Your site description...
+copyright:        Your Name
+url: # add your custom site url (format: https://example.com)
 
-# Site settings
-email: 1540294142@qq.com
-author: Joytou Wu
-owner_name: Joytou Wu
-github_username: joytou
-repo: joytou.github.io
 
-#Server
-url: http://geminiyao.github.io
-github: https://github.com/geminiyao/
-baseurl: ""
+future:      false  # publish future dated posts --  true, false (default)
+highlighter: rouge
+markdown:    kramdown
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
 
-#Page settings
-future: true
-show_drafts: nil
-lsi: true
-published: false
-safe: false
-permalink: /:year/:month/:day/:title/
-markdown: kramdown
-excerpt_separator: '<!-- more -->'
+sass:
+  sass_dir: _sass
+  style: compressed
 
-exclude: ['README.md','Manifest.md']
-include: ['robots.txt']
+permalink: /:categories/:year-:month-:day/:title.html
 
-# Description
-description: "只为博客而生，也因为博客而存在。Not only for the existence of the blog, but also because of the existence of the blog."
-# Keywords
-keywords:
-        - "github"
-        - "bootstrap"
-        - "blog"
-        - "joytou"
-        - "markdown"
-        - "jekyll"
-        - "博客"
-        - "个人博客"
-        - "博客模板"
-        
-#Update configuration
-versioncode: 1
-        #The current versioncode.
-versionname: "1.0.1"
-        #The current versionname.
-remind: true
-        #Whether to remind you to upgrade the latest version when there is the latest version.
+# Amount of post to show on home page
+paginate: 5
 
-#Others
-#Baidu
-BaiduSiteVerification: "lLhmCmVmTf"
-#51La
-51la: "19258191"
-51lamb: "1"
+#kramdown:
+#  input: GFM
+#  auto_ids: true
+#  footnote_nr: 1
+#  entity_output: as_char
+#  toc_levels: 1..6
+#  enable_coderay: false
 
+include:
+  - .htaccess
+
+exclude:
+  - "*.less"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - config
+  - gulpfile.js
+  - lib
+  - log
+  - node_modules
+  - package.json
+  - spec
+  - tmp
